@@ -12,3 +12,13 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = module.eksTestCluster.cluster_name
 }
+
+output "cluster_certificate_authority_data" {
+  description = "Kubernetes Cluster CA data"
+  value       = module.eksTestCluster.cluster_certificate_authority_data
+}
+
+output "eks" {
+  description = "EKS Cluster"
+  value       = module.eksTestCluster
+}

@@ -8,3 +8,14 @@ variable "region" {
   type        = string
   default     = "eu-west-1"
 }
+
+variable "profile" {
+  description = "AWS profile"
+  type        = string
+  default     = "tf-deploy"
+}
+
+variable "cluster_admin_iam_user" {
+  description = "AWS IAM user to be used as the EKS cluster admin"
+  type        = string
+}
