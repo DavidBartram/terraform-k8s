@@ -13,7 +13,7 @@ output "cluster_name" {
   value = module.eks-cluster.cluster_name
 }
 
-output "app_host" {
-  description = "Load balancer hostname"
-  value = module.kubernetes.app_host
+output "app_url" {
+  description = "Public url of web app"
+  value = "http://${module.kubernetes.app_host}"
 }
