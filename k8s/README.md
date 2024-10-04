@@ -1,3 +1,13 @@
+## Overview
+This provisions an EKS cluster and deploys a simple HTTP web app on to the cluster.
+
+- `eks-cluster` module handles bringing up the EKS cluster and related infrastructure (such as a VPC)
+- `kubernetes` handles bringing up the Kubernetes deployment and services.
+
+This way everything is handled by Terraform - no kubectl commands are needed to provision the web app.
+
+The web app will be publically hosted via an AWS load balancer, and can be tested at the url given in the Terraform output `app_url`.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
