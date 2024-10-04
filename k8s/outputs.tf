@@ -12,3 +12,8 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value = module.eks-cluster.cluster_name
 }
+
+output "app_host" {
+  description = "Load balancer hostname"
+  value = module.kubernetes.app_host
+}

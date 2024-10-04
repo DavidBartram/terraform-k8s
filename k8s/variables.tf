@@ -19,3 +19,8 @@ variable "cluster_admin_iam_user" {
   description = "AWS IAM user to be used as the EKS cluster admin"
   type        = string
 }
+
+variable "app_name" {
+  description = "Name for k8s hosted web app"
+  type        = string
+}
