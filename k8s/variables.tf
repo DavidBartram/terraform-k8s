@@ -24,3 +24,13 @@ variable "app_name" {
   description = "Name for k8s hosted web app"
   type        = string
 }
+
+variable container_port {
+  description = "Port for k8s hosted web app"
+  type        = number
+}
+
+variable docker_image {
+  description = "Docker image for k8s hosted web app"
+  type        = string
+}

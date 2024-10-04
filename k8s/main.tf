@@ -6,4 +6,6 @@ module eks-cluster {
 module kubernetes {
     source = "./modules/kubernetes"
     app_name = var.app_name
+    container_port = var.container_port
+    docker_image = var.docker_image
 }

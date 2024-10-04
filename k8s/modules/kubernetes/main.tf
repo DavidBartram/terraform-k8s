@@ -21,11 +21,11 @@ resource "kubernetes_deployment" "web_app_deployment" {
       }
       spec {
         container {
-          image = "nginx:latest"
+          image = "${var.docker_image}"
           name  = "${var.app_name}"
 
           port {
-            container_port = 80
+            container_port = var.container_port
           }
 
           resources {
@@ -54,7 +54,7 @@ resource "kubernetes_service" "web_app_service" {
     }
     port {
       port        = 80
-      target_port = 80
+      target_port = var.container_port
     }
 
     type = "LoadBalancer"
