@@ -70,6 +70,8 @@ resource "kubernetes_service" "web_app_service" {
 }
 
 resource "aws_route53_record" "web_app_record" {
+
+  depends_on = [ kubernetes_service.web_app_service ]
   zone_id = var.hosted_zone_id
   name    = var.domain_name
   type    = "A"
